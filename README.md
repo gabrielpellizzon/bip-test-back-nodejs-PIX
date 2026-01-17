@@ -21,7 +21,6 @@ GET /pix/participants/:ispb
 ### Documentação da API
 
 A documentação da API pode ser acessada em:
-```
 http://localhost:3000/api-docs
 ```
 
