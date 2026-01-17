@@ -1,5 +1,32 @@
 # Relatório Técnico – Serviço de Consulta de Participantes do PIX
 
+---
+
+## Como executar o projeto
+
+```bash
+docker-compose up --build
+```
+
+A aplicação ficará disponível em:
+```
+http://localhost:3000
+
+### Endpoint para consulta de participantes do PIX
+
+```
+GET /pix/participants/:ispb
+```
+
+### Documentação da API
+
+A documentação da API pode ser acessada em:
+```
+http://localhost:3000/api-docs
+```
+
+---
+
 ## 1. Diagnóstico do Problema
 
 Durante a análise inicial do serviço, foi identificado que o endpoint configurado para consulta dos participantes do PIX não existia na API de dados abertos do Banco Central do Brasil (Bacen).
