@@ -2,8 +2,11 @@ const express = require('express');
 const connectDB = require('./database');
 const seedDatabase = require('./seed');
 const pixRoutes = require('./routes/pixRoutes');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpecs = require('./config/swagger');
 
 const app = express();
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 app.use('/pix', pixRoutes);
 
 const startServer = async () => {
