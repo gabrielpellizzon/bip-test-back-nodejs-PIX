@@ -4,16 +4,20 @@ const seedDatabase = require('./seed');
 const pixRoutes = require('./routes/pixRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-
 app.use('/pix', pixRoutes);
 
 const startServer = async () => {
+  const PORT = process.env.PORT || 3000;
   await connectDB();
   await seedDatabase();
-  app.listen(PORT, () => {
+  const server = app.listen(PORT, () => {
     console.log(`API do PIX rodando na porta ${PORT}`);
   });
+  return server;
 };
 
-startServer();
+if (require.main === module) {
+  startServer();
+}
+
+module.exports = { app, startServer };
