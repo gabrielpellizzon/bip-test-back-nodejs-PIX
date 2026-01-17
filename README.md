@@ -11,9 +11,8 @@ docker-compose up --build
 A aplicação ficará disponível em:
 ```
 http://localhost:3000
-
+```
 ### Endpoint para consulta de participantes do PIX
-
 ```
 GET /pix/participants/:ispb
 ```
@@ -21,6 +20,7 @@ GET /pix/participants/:ispb
 ### Documentação da API
 
 A documentação da API pode ser acessada em:
+```
 http://localhost:3000/api-docs
 ```
 
