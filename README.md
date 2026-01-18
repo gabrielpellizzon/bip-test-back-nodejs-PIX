@@ -170,5 +170,3 @@ Com as alterações implementadas, o serviço passou a:
 * Controlar corretamente o ciclo de vida do cache com TTL
 * Disponibilizar documentação técnica via Swagger
 * Possuir cobertura de testes unitários e de integração
-
-Essas melhorias tornaram a aplicação mais robusta, previsível e preparada para evoluções futuras.
