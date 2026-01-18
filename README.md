@@ -24,6 +24,12 @@ A documentação da API pode ser acessada em:
 http://localhost:3000/api-docs
 ```
 
+### Testes
+
+```bash
+npm run test
+```
+
 ---
 
 ## 1. Diagnóstico do Problema
