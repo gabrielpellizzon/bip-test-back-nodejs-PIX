@@ -4,6 +4,24 @@
 
 ## Como executar o projeto
 
+### Pré-requisitos
+
+Antes de iniciar, certifique-se de ter os seguintes requisitos instalados no ambiente:
+
+- **Node.js**: 
+  Plataforma para execução da aplicação JavaScript no servidor.
+
+- **npm**: 
+  Gerenciador de pacotes utilizado para instalar as dependências do projeto.
+
+- **Docker**: 
+  Utilizado para subir a infraestrutura de suporte (MongoDB) via containers.
+
+```bash
+npm install
+```
+
+Execute o projeto:
 ```bash
 docker-compose up --build
 ```

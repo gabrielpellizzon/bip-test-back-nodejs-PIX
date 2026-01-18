@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs/promises');
 const path = require('path');
 const Participante = require('./models/participante');
 
@@ -11,12 +11,15 @@ const seedDatabase = async () => {
     }
 
     const dataPath = path.join(__dirname, '../lista-participantes-instituicoes-em-adesao-pix-20260115.json');
-    if (!fs.existsSync(dataPath)) {
+
+    try {
+      await fs.access(dataPath);
+    } catch {
       console.warn('Arquivo de seed nao encontrado:', dataPath);
       return;
     }
 
-    const jsonData = fs.readFileSync(dataPath, 'utf-8');
+    const jsonData = await fs.readFile(dataPath, 'utf-8');
     const participantes = JSON.parse(jsonData);
 
     await Participante.insertMany(participantes);
